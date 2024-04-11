@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "@/assets/styles/globals.scss";
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./animations";
+
+.active {
+  @apply relative;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    content: "";
+    transition: all, 0.5s;
+    opacity: 1 !important;
+  }
+}
+
+.bgHeaderActive {
+  background-color: rgba(42, 1, 74, 1);
+}
+
+.bgHeaderDefault {
+  background-color: rgba(42, 1, 74, 0.5);
+}
 
 :root {
   --indigo: #6610f2;

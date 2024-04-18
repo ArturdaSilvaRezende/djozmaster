@@ -8,11 +8,9 @@ import {
 } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import localFont from "next/font/local";
-import styles from "@/assets/styles/_Footer.module.scss";
-
-const nowRegular = localFont({ src: "../../assets/fonts/now-regular.otf" });
-const rajdhaniRegular = localFont({
-  src: "../../assets/fonts/Rajdhani-Regular.ttf",
+import styles from "@/styles/_Footer.module.scss";
+const nowRegular = localFont({
+  src: "../../../public/assets/fonts/now-regular.otf",
 });
 
 export default function Footer() {

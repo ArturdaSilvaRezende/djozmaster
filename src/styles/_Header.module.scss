@@ -1,5 +1,5 @@
 .header {
-  @apply p-5;
+  @apply p-5 absolute top-0 left-0 right-0;
 
   .header__container {
     @apply mx-auto flex max-w-7xl items-center justify-between;
@@ -22,6 +22,7 @@
           li {
             @apply text-white font-bold uppercase;
             font-size: 17px;
+            text-shadow: 1px 1px 2px #000;
 
             & + li {
               @apply ml-12;

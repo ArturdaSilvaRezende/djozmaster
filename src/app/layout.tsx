@@ -1,15 +1,11 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
-import "@/assets/styles/globals.scss";
-
-const lato = Lato({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
+import localFont from "next/font/local";
+const nowRegular = localFont({
+  src: "../../public/assets/fonts/now-regular.otf",
 });
+import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body className={nowRegular.className}>
         <Header />
         {children}
         <Footer />

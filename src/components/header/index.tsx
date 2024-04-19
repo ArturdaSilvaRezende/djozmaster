@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Dialog, Popover } from "@headlessui/react";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import styles from "@/assets/styles/_Header.module.scss";
-import HeaderLogo from "@/assets/images/logo.png";
+import styles from "@/styles/_Header.module.scss";
+import HeaderLogo from "/public/assets/images/logo.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function Header() {
 
       <Dialog
         as="div"
-        className={`${styles.header__dialog} ${mobileMenuOpen ? "fadeIn" : ""}`}
+        className={`${styles.header__dialog} fadeIn`}
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >

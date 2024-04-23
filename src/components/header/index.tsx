@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className={`${bgHeaderActive()} ${styles.header}`}>
       <div className={styles.header__container} aria-label="Global">
-        <Link href="/">
+        <Link href="/" className={styles.header__logo}>
           <Image src={HeaderLogo} alt="DjOz - Master" />
         </Link>
 

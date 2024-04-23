@@ -1,0 +1,89 @@
+.events {
+  @apply relative;
+
+  @keyframes mymove {
+    0% {
+      bottom: 0;
+    }
+    100% {
+      bottom: -20px;
+    }
+  }
+
+  h1,
+  h2 {
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  .indicator {
+    @apply absolute left-2/4 -top-44 -translate-x-2/4 font-bold text-7xl max-[389px]:-top-40 
+    max-[390px]:-top-32 max-[414px]:-top-32 max-[430px]:-top-32 max-[540px]:-top-28 
+    max-[599px]:text-6xl;
+    color: var(--purple);
+
+    svg {
+      position: relative;
+      animation: mymove 0.5s ease-in 2s infinite alternate;
+    }
+  }
+
+  .events__container {
+    @apply container mx-auto;
+
+    .events__title {
+      @apply relative flex items-center justify-between mt-28 mb-12 px-14 max-[599px]:-mt-14 
+      max-[599px]:px-4;
+
+      h1 {
+        @apply uppercase font-semibold max-[599px]:text-2xl;
+        font-size: 40px;
+      }
+
+      .events__buttons {
+        @apply max-[599px]:w-40 max-[599px]:text-right;
+
+        button {
+          @apply text-3xl text-gray-400 hover:text-blue-400 ease-in transition-all;
+        }
+      }
+    }
+
+    .mySwipper {
+      figure {
+        @apply mb-14 flex flex-col items-center justify-center;
+
+        .events__image {
+          @apply w-full;
+        }
+
+        figcaption {
+          p {
+            &:first-child {
+              @apply p-2 text-center text-white -mt-6;
+              background-color: var(--purple);
+            }
+
+            &:last-child {
+              @apply flex items-center;
+
+              span {
+                &:first-child {
+                  @apply mr-3;
+                  color: var(--purple);
+                }
+
+                &:last-child {
+                  color: var(--secondary);
+                }
+              }
+            }
+          }
+
+          h2 {
+            @apply my-4 font-bold text-3xl text-center;
+          }
+        }
+      }
+    }
+  }
+}

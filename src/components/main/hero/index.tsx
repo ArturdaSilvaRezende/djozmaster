@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
+import { CldVideoPlayer } from "next-cloudinary";
 import Modal from "@/components/modal";
 import localFont from "next/font/local";
 import Image from "next/image";
 import PlayDefault from "/public/assets/images/play-default.png";
 import styles from "@/styles/main/_Hero.module.scss";
+import "next-cloudinary/dist/cld-video-player.css";
 
 const RockvilleSolid = localFont({
   src: "../../../../public/assets/fonts/RockvilleSolid.woff",
@@ -28,12 +31,7 @@ export default function Hero() {
         </Link>
       </div>
       <Modal>
-        <iframe
-          src="https://www.youtube.com/embed/SBSQ4-lyVhk?si=bva6GuN9IDdzzcMb"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-        ></iframe>
+        <CldVideoPlayer width="1620" height="1080" src="lnaikgruqtwiriszub4k" />
       </Modal>
     </section>
   );

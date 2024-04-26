@@ -4,6 +4,10 @@
   .header__container {
     @apply mx-auto flex max-w-7xl items-center justify-between;
 
+    .header__logo {
+      @apply max-[599px]:mb-2;
+    }
+
     .header__openmenu {
       @apply flex lg:hidden;
 

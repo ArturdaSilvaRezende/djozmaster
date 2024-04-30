@@ -1,0 +1,36 @@
+.titlesection {
+  @apply relative;
+
+  h2 {
+    @apply font-bold;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 42px;
+  }
+
+  h1 {
+    @apply w-full;
+
+    font-size: 72px;
+    color: #ebebeb;
+    letter-spacing: 1px;
+    position: absolute;
+    left: -33px;
+    top: -45px;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    h1 {
+      font-size: 58px;
+      top: -20px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: clamp(57px, 2%, 64px);
+      top: -20px;
+      left: -10px;
+    }
+  }
+}

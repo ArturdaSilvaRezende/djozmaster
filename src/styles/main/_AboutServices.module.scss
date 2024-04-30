@@ -1,0 +1,140 @@
+.aboutservices {
+  @apply max-[767px]:-mt-10;
+
+  .title {
+    @apply flex items-center justify-center mx-auto max-w-7xl my-24 max-[767px]:flex-col;
+
+    .tittle__image {
+      @apply w-1/2  max-[767px]:w-4/5;
+    }
+
+    .title__description {
+      @apply w-5/12 ml-5  max-[767px]:w-11/12 max-[767px]:text-center max-[767px]:ml-0 
+      max-[767px]:mt-12;
+
+      p {
+        @apply my-7 font-normal;
+        color: var(--gray-dark);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+
+      button {
+        @apply uppercase rounded-lg hover:bg-purple-600 transition-all ease-in;
+        font-size: 15px;
+        padding: 14px 25px 12px;
+        color: #ffffff;
+        background: var(--indigo);
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .services {
+    @apply grid grid-cols-2 max-[767px]:grid-cols-1;
+
+    .services__imageleft {
+      @apply w-full relative;
+
+      .imageleft {
+        @apply object-cover;
+        height: 640px;
+      }
+
+      .services__play {
+        @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+
+        .play__circle {
+          @apply block rounded-full h-24 w-24 relative;
+          color: var(--white);
+
+          background: linear-gradient(
+            to right,
+            rgba(127, 0, 173, 0.3),
+            rgba(93, 0, 206, 0.3)
+          );
+
+          button {
+            @apply h-16 w-16 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 rounded-full;
+            background: linear-gradient(to right, #7e00ad, #5c00ce);
+
+            img {
+              @apply mx-auto;
+            }
+          }
+        }
+      }
+    }
+
+    .services__cards {
+      @apply w-full flex flex-wrap items-center;
+
+      figure {
+        @apply w-1/2 h-80 max-[767px]:w-full max-[767px]:text-center max-[767px]:h-auto;
+        padding: 70px 40px 40px 70px;
+
+        img {
+          @apply max-[767px]:mx-auto;
+        }
+
+        figcaption {
+          h3,
+          p {
+            color: var(--white);
+          }
+
+          h3 {
+            @apply font-bold mt-6 mb-2;
+            font-family: "Rajdhani", sans-serif;
+            font-size: 26px;
+          }
+
+          p {
+            @apply max-[767px]:w-4/5 max-[767px]:mx-auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .services {
+      .services__cards {
+        figure {
+          @apply flex flex-col items-center justify-center text-center;
+
+          padding: 20px;
+
+          figcaption {
+            h3 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .services {
+      .services__cards {
+        figure {
+          padding: 50px 0;
+
+          &:nth-child(3) {
+            background-color: #5400bc !important;
+          }
+
+          &:nth-child(4) {
+            background-color: #5c00ce !important;
+          }
+        }
+      }
+    }
+  }
+}

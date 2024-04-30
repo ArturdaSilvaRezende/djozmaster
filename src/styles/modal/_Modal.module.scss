@@ -3,14 +3,7 @@
   flex justify-center items-center;
 
   .modal__contents {
-    @apply flex flex-col w-2/4 mx-auto;
-
-    .modal__close {
-      @apply ml-auto -mr-4;
-      button {
-        @apply bg-red-500 text-white p-1;
-      }
-    }
+    @apply flex flex-col w-2/4 mx-auto bg-purple-900;
 
     .modal__children {
       @apply border-solid border-4 p-2 rounded-sm border-blue-100 w-full h-full;

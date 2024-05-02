@@ -2,7 +2,7 @@
   @apply relative;
 
   h2 {
-    @apply font-bold;
+    @apply font-bold uppercase;
     font-family: "Rajdhani", sans-serif;
     font-size: 42px;
   }
@@ -14,8 +14,8 @@
     color: #ebebeb;
     letter-spacing: 1px;
     position: absolute;
-    left: -33px;
-    top: -45px;
+    left: -13px;
+    top: -38px;
     z-index: -1;
   }
 

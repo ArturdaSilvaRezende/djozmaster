@@ -3,10 +3,22 @@
   flex justify-center items-center;
 
   .modal__contents {
-    @apply flex flex-col w-2/4 mx-auto bg-purple-900;
+    @apply flex flex-col w-2/4 mx-auto bg-purple-900 relative;
+
+    .modal__close {
+      @apply absolute right-0 -top-7;
+
+      button {
+        @apply bg-red-500 text-white p-1;
+      }
+    }
 
     .modal__children {
       @apply border-solid border-4 p-2 rounded-sm border-blue-100 w-full h-full;
+
+      .modalvideo {
+        @apply w-full h-full object-fill;
+      }
     }
   }
 
@@ -27,6 +39,12 @@
   @media screen and (min-width: 600px) and (max-width: 992px) {
     .modal__contents {
       @apply w-10/12 mx-auto;
+
+      .modal__children {
+        .modalvideo {
+          @apply h-96;
+        }
+      }
     }
   }
 
@@ -36,6 +54,12 @@
 
       .modal__close {
         @apply -mr-0 mb-3;
+      }
+
+      .modal__children {
+        .modalvideo {
+          @apply h-52;
+        }
       }
     }
   }

@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { CldVideoPlayer } from "next-cloudinary";
-import CloseModal from "@/components/modal/closemodal";
 import Modal from "@/components/modal";
 import localFont from "next/font/local";
 import { ServicesList, ServicesImageType } from "./servicesList";
@@ -21,6 +19,7 @@ export default function Services() {
   const searchParams = useSearchParams();
   const modalServices = searchParams.get("modalservices");
   const pathImages = "/assets/images/services/";
+  const pathVideoService = "/assets/videos/";
 
   useEffect(() => {
     setServicesList(ServicesList);
@@ -76,14 +75,11 @@ export default function Services() {
         ))}
       </div>
       {modalServices && (
-        <Modal>
-          <CloseModal pathname="/#aboutservices" />
-          <CldVideoPlayer
-            width="1620"
-            height="1080"
-            src="uzkhicmbqq57po6lumyq"
-          />
-        </Modal>
+        <Modal
+          closeModalPath="/#aboutservices"
+          modalVideoPath={pathVideoService}
+          videoFileName="services.mp4"
+        />
       )}
     </div>
   );

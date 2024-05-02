@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { CldVideoPlayer } from "next-cloudinary";
-import Modal from "@/components/modal";
-import CloseModal from "@/components/modal/closemodal";
-import localFont from "next/font/local";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import Modal from "@/components/modal";
+import localFont from "next/font/local";
 import PlayDefault from "/public/assets/images/play-default.png";
 import styles from "@/styles/main/_Hero.module.scss";
-import "next-cloudinary/dist/cld-video-player.css";
 
 const RockvilleSolid = localFont({
   src: "../../../../public/assets/fonts/RockvilleSolid.woff",
@@ -17,6 +14,7 @@ const RockvilleSolid = localFont({
 export default function Hero() {
   const searchParams = useSearchParams();
   const modalHero = searchParams.get("modalhero");
+  const pathVideoHero = "/assets/videos/";
 
   return (
     <section className={styles.hero} id="hero">
@@ -36,14 +34,11 @@ export default function Hero() {
         </Link>
       </div>
       {modalHero && (
-        <Modal>
-          <CloseModal pathname="/#hero" />
-          <CldVideoPlayer
-            width="1620"
-            height="1080"
-            src="lnaikgruqtwiriszub4k"
-          />
-        </Modal>
+        <Modal
+          closeModalPath="/#hero"
+          modalVideoPath={pathVideoHero}
+          videoFileName="hero.mp4"
+        />
       )}
     </section>
   );

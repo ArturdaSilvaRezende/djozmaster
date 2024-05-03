@@ -27,6 +27,8 @@
   }
 
   @media screen and (max-width: 767px) {
+    @apply text-center;
+
     h1 {
       font-size: clamp(57px, 2%, 64px);
       top: -20px;

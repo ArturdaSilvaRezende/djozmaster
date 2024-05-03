@@ -1,0 +1,96 @@
+.youtubefeed {
+  @apply mt-28 text-center max-[767px]:mt-20;
+
+  .youtubefeed__container {
+    @apply flex justify-between items-center container mx-auto mt-20 max-[767px]:flex-col
+    max-[767px]:mt-16;
+
+    .youtubefeed__item {
+      width: 32%;
+
+      .youtubefeed__contents {
+        @apply relative;
+
+        img {
+          @apply object-cover;
+        }
+
+        .youtubefeed__video {
+          @apply absolute z-10 top-0 left-0 right-0 bg-black h-full w-full;
+
+          button {
+            @apply text-white bg-purple-800 absolute z-20 right-0;
+          }
+
+          video {
+            @apply w-full h-full object-fill;
+          }
+        }
+
+        .youtubefeed__play {
+          @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pl-1 
+          rounded-full inline-block;
+
+          background: rgba(255, 255, 255, 0.3);
+          height: 60px;
+          width: 60px;
+          z-index: 1;
+
+          button {
+            &::after {
+              @apply rounded-full cursor-pointer hover:bg-blue-200 transition-all ease-in
+              absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pl-1;
+              background: var(--white);
+              content: "";
+              height: 40px;
+              width: 40px;
+              z-index: -1;
+            }
+
+            img {
+              @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pl-1;
+            }
+          }
+        }
+      }
+
+      .youtubefeed__description {
+        @apply text-center mt-3 font-medium;
+
+        p {
+          @apply max-[767px]:w-3/4 max-[767px]:mx-auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @apply px-5;
+
+    .youtubefeed__container {
+      .youtubefeed__item {
+        .youtubefeed__description {
+          p {
+            @apply mx-auto w-11/12;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .youtubefeed__container {
+      .youtubefeed__item {
+        @apply mb-8;
+
+        width: 90%;
+
+        .youtubefeed__description {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

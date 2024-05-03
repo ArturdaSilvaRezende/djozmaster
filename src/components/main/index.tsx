@@ -2,6 +2,7 @@ import AboutServices from "./aboutservices";
 import Events from "./events";
 import Hero from "./hero";
 import LatestTracks from "./latesttracks/intex";
+import YoutubeFeed from "./youtubefeed";
 
 export default function Main() {
   return (
@@ -10,6 +11,7 @@ export default function Main() {
       <Events />
       <AboutServices />
       <LatestTracks />
+      <YoutubeFeed />
     </main>
   );
 }

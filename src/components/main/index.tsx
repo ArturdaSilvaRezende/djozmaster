@@ -1,3 +1,4 @@
+import Countdown from "../countdown";
 import AboutServices from "./aboutservices";
 import Events from "./events";
 import Hero from "./hero";
@@ -12,6 +13,7 @@ export default function Main() {
       <AboutServices />
       <LatestTracks />
       <YoutubeFeed />
+      <Countdown />
     </main>
   );
 }

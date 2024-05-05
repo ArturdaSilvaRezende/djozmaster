@@ -1,0 +1,119 @@
+.countdown {
+  @apply mt-28 bg-no-repeat;
+  background-image: url("/assets/images/countdown-bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  h1,
+  h2,
+  p,
+  button,
+  span {
+    color: var(--white);
+    text-shadow: 1px 1px 20px #000;
+  }
+
+  .countdown__container {
+    @apply container mx-auto text-center;
+    padding-bottom: 480px;
+
+    .countdown__title {
+      @apply mb-9;
+
+      h1 {
+        @apply mb-6;
+        font-size: 90px;
+      }
+
+      h2 {
+        font-size: 26px;
+        font-family: "Now Regular";
+        text-transform: uppercase;
+        letter-spacing: 4px;
+      }
+    }
+
+    .countdown__numbers {
+      @apply mb-9 flex justify-between items-center w-1/2 mx-auto;
+
+      p {
+        @apply text-center  w-28;
+
+        span {
+          @apply font-bold block;
+
+          &:first-child {
+            font-family: "Rajdhani", sans-serif;
+            font-size: 90px;
+            line-height: 100px;
+          }
+
+          &:last-child {
+            @apply uppercase;
+          }
+        }
+      }
+    }
+
+    button {
+      @apply mt-4;
+
+      font-size: 15px;
+      text-transform: uppercase;
+      padding: 14px 25px 12px;
+      background: var(--indigo);
+      letter-spacing: 2px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    padding-bottom: 250px;
+
+    .countdown__container {
+      .countdown__numbers {
+        @apply w-9/12;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 220px;
+
+    .countdown__container {
+      .countdown__title {
+        @apply mb-6;
+
+        h1 {
+          font-size: 55px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .countdown__numbers {
+        @apply w-11/12 flex-wrap justify-center;
+
+        p {
+          @apply w-5/12 mt-5;
+
+          span {
+            @apply font-bold block;
+
+            &:first-child {
+              font-size: 50px;
+              line-height: 60px;
+            }
+
+            &:last-child {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

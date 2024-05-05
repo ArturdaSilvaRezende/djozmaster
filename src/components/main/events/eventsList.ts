@@ -15,58 +15,60 @@ export type EventsType = {
   address: string;
 };
 
+const fullYear = new Date();
+
 export const EventList: EventsType[] = [
   {
     img: `${Event01}`,
-    eventData: "Dec 19, 2022",
+    eventData: `Dec 19, ${fullYear.getFullYear()}`,
     artist: "Ashley Wright",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event02}`,
-    eventData: "Dec 19, 2022",
+    eventData: `Dec 19, ${fullYear.getFullYear()}`,
     artist: "Emma Johnson",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event03}`,
-    eventData: "Dec 19, 2022",
+    eventData: `Dec 19, ${fullYear.getFullYear()}`,
     artist: "Kenzie Hall",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event04}`,
-    eventData: "Dec 20, 2022",
+    eventData: `Dec 20, ${fullYear.getFullYear()}`,
     artist: "Thierry Torres",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event05}`,
-    eventData: "Dec 20, 2022",
+    eventData: `Dec 20, ${fullYear.getFullYear()}`,
     artist: "Ryan Carter",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event06}`,
-    eventData: "Dec 20, 2022",
+    eventData: `Dec 20, ${fullYear.getFullYear()}`,
     artist: "Edward Reed",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event07}`,
-    eventData: "Dec 21, 2022",
+    eventData: `Dec 21, ${fullYear.getFullYear()}`,
     artist: "Lucille Thompson",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event08}`,
-    eventData: "Dec 21, 2022",
+    eventData: `Dec 21, ${fullYear.getFullYear()}`,
     artist: "Mary Barnes",
     address: "Funkhaus Berlin, Berlin, Germany",
   },
   {
     img: `${Event09}`,
-    eventData: "Dec 21, 2022",
+    eventData: `Dec 21, ${fullYear.getFullYear()}`,
     artist: "Micheline Collins",
     address: "Funkhaus Berlin, Berlin, Germany",
   },

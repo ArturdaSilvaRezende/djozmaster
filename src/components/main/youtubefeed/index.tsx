@@ -42,7 +42,7 @@ export default function YoutubeFeed() {
             <div className={styles.youtubefeed__contents}>
               <Image
                 src={`${pathImage + festival.fileImageName}`}
-                alt={festival.festivalName}
+                alt={festival.festivalAbout}
                 width={500}
                 height={0}
               />
@@ -75,7 +75,8 @@ export default function YoutubeFeed() {
             </div>
 
             <figcaption className={styles.youtubefeed__description}>
-              <p>{festival.festivalName}</p>
+              <p>Imagine Music Festival</p>
+              <h3>{festival.festivalAbout}</h3>
             </figcaption>
           </figure>
         ))}

@@ -9,7 +9,7 @@ export type FestivalType = {
   id: number;
   fileVideoName: string;
   fileImageName: string;
-  festivalName: string;
+  festivalAbout: string;
 };
 
 export const FestivalList: FestivalType[] = [
@@ -17,18 +17,18 @@ export const FestivalList: FestivalType[] = [
     id: 1,
     fileVideoName: `${Festival01}`,
     fileImageName: `${YoutubeFeed01}`,
-    festivalName: "David Guetta Miami Ultra Music Festival",
+    festivalAbout: "Bailey McKee - Home",
   },
   {
     id: 2,
     fileVideoName: `${Festival02}`,
     fileImageName: `${YoutubeFeed02}`,
-    festivalName: "Martin Garrix (Full live-set) | SLAM!Koningsdag",
+    festivalAbout: "Venue Annoucement",
   },
   {
     id: 3,
     fileVideoName: `${Festival03}`,
     fileImageName: `${YoutubeFeed03}`,
-    festivalName: "Dimitri Vegas, Steve Aoki & Like Mike’s",
+    festivalAbout: "Seven Lions, Jason Ross",
   },
 ];

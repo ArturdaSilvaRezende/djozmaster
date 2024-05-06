@@ -39,7 +39,7 @@
       @apply mb-9 flex justify-between items-center w-1/2 mx-auto;
 
       p {
-        @apply text-center  w-28;
+        @apply text-center w-28;
 
         span {
           @apply font-bold block;
@@ -54,6 +54,11 @@
             @apply uppercase;
           }
         }
+      }
+
+      .expired {
+        @apply mx-auto;
+        width: 70%;
       }
     }
 

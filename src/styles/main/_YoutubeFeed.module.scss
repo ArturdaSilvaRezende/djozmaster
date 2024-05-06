@@ -6,6 +6,7 @@
     max-[767px]:mt-16;
 
     .youtubefeed__item {
+      box-shadow: 0 10px 10px var(--secondary);
       width: 32%;
 
       .youtubefeed__contents {
@@ -55,10 +56,12 @@
       }
 
       .youtubefeed__description {
-        @apply text-center mt-3 font-medium;
+        @apply text-center py-3;
 
-        p {
-          @apply max-[767px]:w-3/4 max-[767px]:mx-auto;
+        h3 {
+          @apply mt-2 font-bold text-xl;
+          color: var(--indigo);
+          font-family: "Rajdhani", sans-serif;
         }
       }
     }
@@ -66,16 +69,6 @@
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     @apply px-5;
-
-    .youtubefeed__container {
-      .youtubefeed__item {
-        .youtubefeed__description {
-          p {
-            @apply mx-auto w-11/12;
-          }
-        }
-      }
-    }
   }
 
   @media screen and (max-width: 767px) {

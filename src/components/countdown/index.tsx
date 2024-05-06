@@ -12,14 +12,15 @@ const NowRegular = localFont({
 });
 
 export default function Countdown() {
-  const fullYear = new Date();
-  const countDownDate = new Date(
-    `Dec 31, ${fullYear.getFullYear()} 23:59:59`
-  ).getTime();
   const [days, setDays] = useState<number>();
   const [hours, setHours] = useState<number>();
   const [minutes, setMinutes] = useState<number>();
   const [seconds, setSeconds] = useState<number>();
+  const [expired, setExpired] = useState<number>();
+  const fullYear = new Date();
+  const countDownDate = new Date(
+    `Dec 31, ${fullYear.getFullYear()} 23:59:59`
+  ).getTime();
 
   function calculateCountdown() {
     const interval = setInterval(() => {
@@ -39,6 +40,7 @@ export default function Countdown() {
 
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       setSeconds(seconds);
+      setExpired(distance);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -56,24 +58,32 @@ export default function Countdown() {
           <h2 className={NowRegular.className}>Music Festival Start in</h2>
         </div>
         <div className={styles.countdown__numbers}>
-          <p>
-            <span>
-              {(days as number) >= 100 ? days : ("0" + days).slice(-2)}
-            </span>
-            <span>Days</span>
-          </p>
-          <p>
-            <span>{("0" + hours).slice(-2)}</span>
-            <span>Hours</span>
-          </p>
-          <p>
-            <span>{("0" + minutes).slice(-2)}</span>
-            <span>Minutes</span>
-          </p>
-          <p>
-            <span>{("0" + seconds).slice(-2)}</span>
-            <span>Seconds</span>
-          </p>
+          {(expired as number) <= 0 ? (
+            <p className={styles.expired}>
+              <span>EXPIRED</span>
+            </p>
+          ) : (
+            <>
+              <p>
+                <span>
+                  {(days as number) >= 100 ? days : ("0" + days).slice(-2)}
+                </span>
+                <span>Days</span>
+              </p>
+              <p>
+                <span>{("0" + hours).slice(-2)}</span>
+                <span>Hours</span>
+              </p>
+              <p>
+                <span>{("0" + minutes).slice(-2)}</span>
+                <span>Minutes</span>
+              </p>
+              <p>
+                <span>{("0" + seconds).slice(-2)}</span>
+                <span>Seconds</span>
+              </p>
+            </>
+          )}
         </div>
         <button>Buy Tickets</button>
       </div>

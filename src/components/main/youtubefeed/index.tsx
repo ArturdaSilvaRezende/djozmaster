@@ -45,6 +45,7 @@ export default function YoutubeFeed() {
                 alt={festival.festivalAbout}
                 width={500}
                 height={0}
+                className={styles.imageCard}
               />
 
               {activeVideo === festival.id && (
@@ -67,8 +68,8 @@ export default function YoutubeFeed() {
                   <Image
                     src={PlayDefault}
                     alt="Play Icon Default"
-                    width={18}
-                    height={18}
+                    width={33}
+                    height={33}
                   />
                 </button>
               </div>

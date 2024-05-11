@@ -1,0 +1,30 @@
+.breadcrumb {
+  @apply mt-28 mb-8 container mx-auto flex max-[767px]:pl-5;
+
+  .breadcrumb__home {
+    @apply flex items-center;
+
+    svg {
+      font-size: 19px;
+    }
+
+    a {
+      @apply ml-2 relative;
+      top: 2px;
+    }
+  }
+
+  .breadcrum__page {
+    @apply relative ml-2;
+    top: 2px;
+    color: var(--secondary);
+
+    span {
+      @apply pl-1;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @apply pl-5;
+  }
+}

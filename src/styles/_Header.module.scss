@@ -1,11 +1,13 @@
 .header {
-  @apply px-5 py-4 absolute top-0 left-0 right-0;
+  @apply py-4 absolute top-0 left-0 right-0;
+  z-index: 999;
 
   .header__container {
-    @apply mx-auto flex max-w-7xl items-center justify-between;
+    @apply container mx-auto flex max-w-7xl items-center justify-between max-[767px]:px-5;
 
     .header__logo {
-      @apply max-[599px]:mb-2;
+      @apply relative;
+      top: -3px;
     }
 
     .header__openmenu {
@@ -73,6 +75,8 @@
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .header__container {
+      @apply px-5;
+
       img {
         position: relative;
         top: -6px;
@@ -82,7 +86,8 @@
 }
 
 .header__dialog {
-  @apply lg:hidden;
+  @apply lg:hidden absolute;
+  z-index: 999;
 
   .header__panel {
     @apply fixed inset-y-0 right-0 z-10 w-2/3 overflow-y-auto px-6 

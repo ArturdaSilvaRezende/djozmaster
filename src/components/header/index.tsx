@@ -22,7 +22,7 @@ export default function Header() {
     <header className={`${bgHeaderActive()} ${styles.header}`}>
       <div className={styles.header__container} aria-label="Global">
         <Link href="/" className={styles.header__logo}>
-          <Image src={HeaderLogo} alt="DjOz - Master" />
+          <Image src={HeaderLogo} alt="DjOz - Master" priority />
         </Link>
 
         <div className={styles.header__openmenu}>

@@ -1,3 +1,5 @@
+import PageAbout from "@/components/pages/about";
+
 export default function About() {
-  return <div>About</div>;
+  return <PageAbout />;
 }

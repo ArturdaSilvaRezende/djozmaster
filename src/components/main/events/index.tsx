@@ -1,6 +1,7 @@
 "use client";
-import Image from "next/image";
+import React from "react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -8,6 +9,7 @@ import {
   Autoplay,
   EffectCoverflow,
 } from "swiper/modules";
+
 import { EventList, EventsType } from "./eventsList";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
@@ -44,14 +46,12 @@ export default function Events() {
           className={styles.mySwipper}
           slidesPerView={"auto"}
           spaceBetween={60}
-          loop={true}
           effect={"coverflow"}
           pagination={{
             dynamicBullets: true,
           }}
           autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+            delay: 5000,
           }}
           navigation={{
             nextEl: ".button-next",
@@ -68,25 +68,22 @@ export default function Events() {
             599: {
               slidesPerView: 1,
             },
-
             600: {
               slidesPerView: 2,
             },
-
             993: {
               slidesPerView: 3,
             },
           }}
         >
           {eventsList.map((eventItem) => (
-            <SwiperSlide key={eventItem.artist}>
+            <SwiperSlide key={eventItem.id}>
               <figure>
                 <Image
                   src={`${pathImage + eventItem.img}`}
                   alt={eventItem.artist}
                   width={350}
                   height={300}
-                  priority
                   className={styles.events__image}
                 />
                 <figcaption>

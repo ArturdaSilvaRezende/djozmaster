@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./animations";
+
+.active {
+  @apply relative;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    content: "";
+    transition: all, 0.5s;
+    opacity: 1 !important;
+  }
+}
+
+.bgHeaderActive {
+  background-color: rgba(42, 1, 74, 1);
+}
+
+.bgHeaderDefault {
+  background-color: rgba(42, 1, 74, 0.6);
+}
+
+.footer__margintop {
+  margin-top: -547px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .footer__margintop {
+    margin-top: -730px;
+  }
+}
+
+:root {
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}

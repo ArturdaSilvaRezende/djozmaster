@@ -6,8 +6,8 @@ import Image from "next/image";
 import Modal from "@/components/modal";
 import localFont from "next/font/local";
 import { ServicesList, ServicesImageType } from "./servicesList";
+import { FaPlay } from "react-icons/fa";
 import ServiceImageVideo from "/public/assets/images/services/service-left.jpg";
-import PlayImage from "/public/assets/images/play.png";
 import styles from "@/styles/main/_AboutServices.module.scss";
 
 const nowRegular = localFont({
@@ -31,8 +31,9 @@ export default function Services() {
         <Image
           src={ServiceImageVideo}
           alt="Background Image - Services"
-          width="0"
-          height="0"
+          width={300}
+          height={300}
+          priority
           className={styles.imageleft}
         />
 
@@ -40,12 +41,7 @@ export default function Services() {
           <span className={styles.play__circle}>
             <Link href="?modalservices=true">
               <button>
-                <Image
-                  src={PlayImage}
-                  alt="Play - Image"
-                  width={20}
-                  height={20}
-                />
+                <FaPlay />
               </button>
             </Link>
           </span>

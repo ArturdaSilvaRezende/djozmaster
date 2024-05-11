@@ -7,7 +7,11 @@ export default function ViewTracks() {
     <div className={styles.viewtracks}>
       <p className={styles.viewtracks__title}>View All Tracks</p>
       <div className={styles.viewtracks__image}>
-        <Image src={ViewTraksImage} alt="View Track Image Background" />
+        <Image
+          src={ViewTraksImage}
+          alt="View Track Image Background"
+          priority
+        />
       </div>
     </div>
   );

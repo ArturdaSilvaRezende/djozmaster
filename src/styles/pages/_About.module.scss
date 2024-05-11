@@ -1,0 +1,368 @@
+.about {
+  .about__container {
+    @apply container mx-auto;
+
+    .about__skills {
+      @apply flex max-[767px]:flex-col;
+
+      .skills__description {
+        @apply w-1/2 p-16 max-[767px]:w-full max-[767px]:px-8 max-[767px]:py-14;
+        background-color: var(--indigo);
+        color: var(--white);
+
+        .description__title {
+          @apply relative max-[767px]:text-center;
+
+          h1 {
+            @apply font-bold uppercase;
+            font-family: "Rajdhani", sans-serif;
+            font-size: 36px;
+            position: relative;
+          }
+
+          h2 {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: -45px;
+            width: 100%;
+            z-index: 1;
+            opacity: 0.1;
+          }
+        }
+
+        .description__contents {
+          @apply mt-20;
+        }
+
+        .skills__bar {
+          @apply mt-5;
+
+          p {
+            @apply flex justify-between items-center relative;
+
+            span {
+              &:last-child {
+                @apply absolute block text-right;
+              }
+            }
+          }
+
+          .perform {
+            width: 95%;
+          }
+
+          .useMidi {
+            width: 85%;
+          }
+
+          .remix {
+            width: 98%;
+          }
+
+          .bar {
+            @apply mt-4 relative w-full;
+
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            margin-bottom: 0;
+
+            span {
+              background: rgb(255, 255, 255);
+              height: 10px;
+              display: block;
+
+              &::before {
+                content: " ";
+              }
+            }
+          }
+        }
+      }
+
+      .skills__video {
+        @apply w-1/2 relative max-[767px]:w-full;
+
+        .video__image {
+          @apply w-full h-auto;
+        }
+
+        .skills__play {
+          @apply rounded-full inline-block absolute top-2/4 left-2/4 -translate-x-2/4 
+          -translate-y-2/4 pl-1;
+
+          background: rgba(117, 31, 221, 0.3);
+          height: 90px;
+          width: 90px;
+          z-index: 1;
+
+          &::after {
+            @apply absolute rounded-full cursor-pointer;
+            background: var(--white);
+            content: "";
+            left: 15px;
+            top: 15px;
+            height: 60px;
+            width: 60px;
+            z-index: -1;
+          }
+
+          button {
+            @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4;
+
+            img {
+              @apply w-4 h-5;
+            }
+          }
+        }
+      }
+    }
+
+    .about__description {
+      @apply mt-24 flex justify-between items-center max-[767px]:flex-col max-[767px]:mt-16 
+      max-[767px]:px-5;
+
+      .about__image {
+        @apply w-1/2 max-[767px]:w-full max-[767px]:mb-14;
+      }
+
+      .about__contents {
+        @apply w-1/2 max-[767px]:w-full;
+
+        h2 {
+          @apply uppercase font-bold;
+          font-family: "Rajdhani", sans-serif;
+          font-size: 42px;
+          color: #111111;
+        }
+
+        p {
+          @apply py-8;
+        }
+      }
+    }
+
+    .about__pictures {
+      @apply grid grid-cols-12 mt-24 gap-1;
+
+      img {
+        @apply object-fill w-full h-full;
+
+        &:nth-child(1) {
+          grid-row: 1 / 2;
+          grid-column: 1 / 3;
+        }
+        &:nth-child(2) {
+          grid-row: 2 / 3;
+          grid-column: 1 / 3;
+        }
+        &:nth-child(3) {
+          grid-row: 1 / 3;
+          grid-column: 3 / 7;
+        }
+
+        &:nth-child(4) {
+          grid-column: 7 / 11;
+        }
+
+        &:nth-child(5) {
+          grid-column: 11 / 13;
+        }
+
+        &:nth-child(6) {
+          grid-column: 7 / 9;
+        }
+
+        &:nth-child(7) {
+          grid-column: 9 / 13;
+        }
+      }
+    }
+
+    .services {
+      @apply mt-24 text-center;
+
+      .services__container {
+        @apply mt-24 flex justify-between gap-10 max-[767px]:flex-col max-[767px]:gap-0;
+
+        figure {
+          @apply w-1/3 max-[767px]:w-full;
+
+          .image__card {
+            @apply w-full h-auto;
+          }
+
+          figcaption {
+            div {
+              @apply w-14 h-14 p-3 rounded-full mx-auto relative -top-8;
+              background-color: var(--purple);
+
+              img {
+                @apply w-8 h-8 relative;
+                top: 1px;
+                left: 1px;
+              }
+            }
+
+            h3 {
+              @apply mb-3 font-bold;
+              font-size: 26px;
+              color: #111111;
+              font-family: "Rajdhani", sans-serif;
+            }
+
+            p {
+              @apply w-11/12 mx-auto;
+              color: #444444;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .about__container {
+      @apply px-5;
+
+      .about__skills {
+        .skills__description {
+          @apply px-5 py-9;
+
+          .description__title {
+            @apply text-center;
+
+            h2 {
+              font-size: 75px;
+              top: -30px;
+            }
+          }
+
+          .description__contents {
+            @apply mt-12;
+          }
+        }
+
+        .skills__video {
+          .video__image {
+            @apply h-full;
+          }
+        }
+      }
+
+      .about__description {
+        @apply mt-20;
+
+        .about__contents {
+          @apply ml-6;
+
+          h2 {
+            @apply text-center;
+            font-size: 30px;
+          }
+        }
+      }
+
+      .services {
+        @apply mt-16;
+
+        .services__container {
+          @apply mt-16;
+
+          figure {
+            figcaption {
+              div {
+                img {
+                  @apply w-7 h-7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .about__container {
+      .about__skills {
+        .skills__description {
+          .description__title {
+            h2 {
+              font-size: 70px;
+            }
+          }
+        }
+      }
+
+      .about__description {
+        .about__contents {
+          h2 {
+            @apply text-center;
+            font-size: 29px;
+          }
+        }
+      }
+
+      .about__pictures {
+        @apply mt-12;
+
+        img {
+          &:nth-child(1) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 7;
+          }
+          &:nth-child(2) {
+            grid-row: 1 / 2;
+            grid-column: 7 / 13;
+          }
+          &:nth-child(3) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 13;
+          }
+
+          &:nth-child(4) {
+            grid-row: 4 / 5;
+            grid-column: 1 / 13;
+          }
+
+          &:nth-child(5) {
+            grid-row: 3 / 4;
+            grid-column: 1 / 7;
+          }
+
+          &:nth-child(6) {
+            grid-row: 3 / 4;
+            grid-column: 7 / 13;
+          }
+
+          &:nth-child(7) {
+            grid-row: 6 / 7;
+            grid-column: 1 / 13;
+          }
+        }
+      }
+
+      .services {
+        @apply mt-16;
+
+        .services__container {
+          @apply mt-16 px-5;
+
+          figure {
+            @apply mb-12;
+
+            figcaption {
+              div {
+                img {
+                  @apply w-7 h-7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import "@/styles/globals.scss";
+import "../styles/_globals.scss";
 
 const nowRegular = localFont({
   src: "../../public/assets/fonts/now-regular.otf",

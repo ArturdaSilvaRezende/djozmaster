@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import {
   FaDribbble,
   FaFacebookF,
@@ -8,19 +10,25 @@ import {
 } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import localFont from "next/font/local";
-import styles from "@/styles/_Footer.module.scss";
+import "../../styles/_footer.scss";
 const nowRegular = localFont({
   src: "../../../public/assets/fonts/now-regular.otf",
 });
 
 export default function Footer() {
+  const pathName = usePathname();
+
+  const handleMarginTop = () => {
+    return pathName === "/" ? "footer__margintop" : "";
+  };
+
   const date = new Date();
   const fullYear = date.getFullYear();
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer__container}>
-        <div className={styles.footer__contact}>
-          <div className={styles.contactItem}>
+    <footer className={`footer ${handleMarginTop()}`}>
+      <div className="footer__container">
+        <div className="footer__contact">
+          <div className="contactItem">
             <div>
               <FaPhoneAlt />
             </div>
@@ -29,7 +37,7 @@ export default function Footer() {
               <p>1-677-124-44227</p>
             </div>
           </div>
-          <div className={styles.contactItem}>
+          <div className="contactItem">
             <div>
               <GrMail />
             </div>
@@ -39,7 +47,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={styles.footer__social}>
+        <div className="footer__social">
           <h2>DJoz</h2>
           <ul>
             <li>
@@ -56,7 +64,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className={styles.footer__sendEmail}>
+        <div className="footer__sendEmail">
           <h2>Stay With Me</h2>
           <form>
             <div>
@@ -68,7 +76,7 @@ export default function Footer() {
           </form>
         </div>
       </div>
-      <p className={styles.footer__copyright}>
+      <p className="footer__copyright">
         Copyright © {fullYear} All rights reserved | This template is made with
         by
         <a

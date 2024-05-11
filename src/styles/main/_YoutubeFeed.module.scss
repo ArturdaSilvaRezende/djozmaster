@@ -12,8 +12,8 @@
       .youtubefeed__contents {
         @apply relative;
 
-        img {
-          @apply object-cover;
+        .imageCard {
+          @apply object-cover w-full h-auto;
         }
 
         .youtubefeed__video {
@@ -49,7 +49,7 @@
             }
 
             img {
-              @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pl-1;
+              @apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pl-1 w-auto h-auto;
             }
           }
         }

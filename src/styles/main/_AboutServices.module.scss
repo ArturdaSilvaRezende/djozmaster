@@ -38,7 +38,7 @@
       @apply w-full relative;
 
       .imageleft {
-        @apply object-cover;
+        @apply object-cover w-auto;
         height: 640px;
       }
 
@@ -59,8 +59,9 @@
             @apply h-16 w-16 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 rounded-full;
             background: linear-gradient(to right, #7e00ad, #5c00ce);
 
-            img {
-              @apply mx-auto;
+            svg {
+              @apply block mx-auto;
+              font-size: 21px;
             }
           }
         }

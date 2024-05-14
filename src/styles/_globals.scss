@@ -28,6 +28,12 @@
   background-color: rgba(42, 1, 74, 0.6);
 }
 
+.bgPaginationActive {
+  background-color: var(--indigo) !important;
+  color: var(--white) !important;
+  font-weight: bolder;
+}
+
 .footer__margintop {
   margin-top: -547px;
 }

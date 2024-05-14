@@ -1,0 +1,115 @@
+.discography {
+  .discography__container {
+    @apply container mx-auto text-center mt-20 max-[767px]:mt-12 relative;
+
+    .discography__contents {
+      @apply mt-20 w-10/12 mx-auto flex flex-wrap justify-between items-center 
+      max-[767px]:mt-12 max-[767px]:w-11/12;
+
+      figure {
+        @apply mb-12 w-72 rounded-lg max-[767px]:w-11/12 max-[767px]:mx-auto;
+        box-shadow: 5px 5px 20px rgba(22, 41, 124, 0.5),
+          -5px -5px 20px rgba(22, 41, 124, 0.5);
+
+        img {
+          @apply w-full h-auto rounded-s-lg rounded-e-lg;
+        }
+
+        figcaption {
+          @apply pb-8 pt-6;
+
+          p {
+            @apply font-bold text-xl;
+            color: var(--indigo);
+          }
+
+          h3 {
+            @apply uppercase mt-3 mb-6;
+            font-size: 22px;
+            color: #111111;
+            font-family: "Rajdhani", sans-serif;
+          }
+
+          div {
+            @apply flex justify-center;
+
+            img {
+              @apply cursor-pointer max-[767px]:w-32 w-32 h-auto;
+
+              & + img {
+                @apply ml-3;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination__buttons {
+      @apply max-[767px]:mb-10 max-[767px]:px-1 z-10;
+
+      button {
+        @apply uppercase mr-2 py-3 px-5 cursor-pointer max-[767px]:px-4;
+        font-size: 15px;
+        color: #111111;
+        letter-spacing: 2px;
+        background: #ebe8e8;
+        transition: all, 0.3s;
+
+        span {
+          @apply relative;
+          top: 3px;
+        }
+
+        &:hover {
+          background: var(--indigo);
+          color: var(--white);
+        }
+      }
+    }
+
+    .pagination__loading {
+      @apply mx-auto mt-12 mb-20 fixed bg-white z-50;
+      inset: 0;
+      overflow-y: auto;
+
+      img {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1024px) {
+    .discography__container {
+      @apply px-5;
+
+      .discography__contents {
+        figure {
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .discography__container {
+      @apply px-5 mt-12;
+
+      .discography__contents {
+        figure {
+          width: 47%;
+          box-shadow: 2px 2px 20px rgba(22, 41, 124, 0.5),
+            -2px -2px 20px rgba(22, 41, 124, 0.5);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .discography__container {
+      .pagination__loading {
+        height: 30vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+.tours {
+  .tours__container {
+    .tours__countdown {
+      margin-top: -32px;
+    }
+
+    .tours__contents {
+      @apply container mx-auto mt-24 flex justify-between flex-wrap;
+
+      &:nth-child(3) {
+        .tours__item {
+          order: 2;
+        }
+
+        .tours__image {
+          order: 1;
+        }
+      }
+
+      .tours__item {
+        @apply w-5/12 mx-auto;
+
+        .item__description {
+          h2 {
+            font-size: 42px;
+            color: #111111;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-family: "Rajdhani", sans-serif;
+          }
+
+          .item__address {
+            @apply flex justify-between mb-14;
+
+            .address__text {
+              p {
+                @apply flex items-center;
+
+                & + p {
+                  @apply mt-4;
+                }
+
+                span {
+                  @apply ml-5;
+                }
+
+                svg {
+                  color: var(--indigo);
+                }
+              }
+            }
+
+            button {
+              @apply font-bold;
+              font-size: 18px;
+              color: var(--white);
+              padding: 14px 25px 12px 30px;
+              background-color: #5c00ce;
+            }
+          }
+
+          .item__text {
+            p {
+              font-size: 21px;
+              font-family: "Now Regular";
+              color: #444444;
+              font-weight: 400;
+
+              & + p {
+                @apply mt-7;
+              }
+            }
+          }
+        }
+
+        .item__buyTickets {
+          @apply p-2 w-32 mt-12;
+          background: transparent;
+          border: 2px solid #5c00ce;
+          color: #111111;
+        }
+      }
+
+      .tours__image {
+        @apply w-1/2 relative;
+
+        &::after {
+          position: absolute;
+          left: 100px;
+          top: -45px;
+          width: calc(100% - 170px);
+          height: 100%;
+          border: 20px solid rgba(9, 53, 247, 0.1);
+          content: "";
+          z-index: -1;
+        }
+        img {
+          @apply w-8/12 h-auto ml-auto object-cover;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .tours__container {
+      .tours__contents {
+        @apply mt-12;
+
+        &:nth-child(3) {
+          .tours__item {
+            order: 1;
+          }
+
+          .tours__image {
+            order: 2;
+          }
+        }
+
+        .tours__item {
+          @apply w-10/12;
+        }
+
+        .tours__image {
+          @apply mt-24 w-10/12;
+
+          &::after {
+            left: 140px;
+            width: calc(100% - 220px);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @apply mb-24;
+
+    .tours__container {
+      .tours__contents {
+        @apply mt-12;
+
+        &:nth-child(3) {
+          .tours__item {
+            order: 1;
+          }
+
+          .tours__image {
+            order: 2;
+          }
+        }
+
+        .tours__item {
+          @apply w-10/12;
+
+          .item__description {
+            h2 {
+              @apply text-center;
+              font-size: 28px;
+            }
+
+            .item__address {
+              @apply items-center;
+
+              p {
+                font-size: 14px;
+              }
+
+              button {
+                padding: 10px;
+              }
+            }
+          }
+        }
+
+        .tours__image {
+          @apply mt-24 w-10/12;
+
+          &::after {
+            left: 40px;
+            width: calc(100% - 70px);
+          }
+
+          img {
+            @apply w-9/12;
+          }
+        }
+      }
+    }
+  }
+}

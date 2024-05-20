@@ -3,14 +3,10 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "@/components/modal";
-import localFont from "next/font/local";
+import { RockvilleSolid } from "@/fonts/fonts";
 import SkillsVideo from "/public/assets/images/about/skill-video.jpg";
 import PlayDefault from "/public/assets/images/play-default.png";
 import styles from "@/styles/pages/_About.module.scss";
-
-const RockvilleSolid = localFont({
-  src: "../../../../public/assets/fonts/RockvilleSolid.woff",
-});
 
 export default function Skills() {
   const searchParams = useSearchParams();

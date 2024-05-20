@@ -1,3 +1,5 @@
+import PageTours from "@/components/pages/tours";
+
 export default function Tours() {
-  return <div>Tours</div>;
+  return <PageTours />;
 }

@@ -1,9 +1,5 @@
-import localFont from "next/font/local";
+import { RockvilleSolid } from "@/fonts/fonts";
 import styles from "@/styles/_TitleSection.module.scss";
-
-const RockvilleSolid = localFont({
-  src: "../../../public/assets/fonts/RockvilleSolid.woff",
-});
 
 type PropsTitle = {
   title: string;

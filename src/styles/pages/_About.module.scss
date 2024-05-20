@@ -125,6 +125,10 @@
 
       .about__image {
         @apply w-1/2 max-[767px]:w-full max-[767px]:mb-14;
+
+        img {
+          @apply w-full h-auto;
+        }
       }
 
       .about__contents {
@@ -139,6 +143,10 @@
 
         p {
           @apply py-8;
+        }
+
+        img {
+          @apply w-full h-auto;
         }
       }
     }

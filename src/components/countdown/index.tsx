@@ -1,17 +1,18 @@
 "use client";
-import { useState } from "react";
-import localFont from "next/font/local";
+import { useState, useEffect } from "react";
+import { nowRegular } from "@/fonts/fonts";
+import { RockvilleSolid } from "@/fonts/fonts";
 import styles from "@/styles/_Countdown.module.scss";
 
-const RockvilleSolid = localFont({
-  src: "../../../public/assets/fonts/RockvilleSolid.woff",
-});
+type classesProps = {
+  countdownClass?: string;
+  countdownContainerClass?: string;
+};
 
-const NowRegular = localFont({
-  src: "../../../public/assets/fonts/now-regular.otf",
-});
-
-export default function Countdown() {
+export default function Countdown({
+  countdownClass,
+  countdownContainerClass,
+}: classesProps) {
   const [days, setDays] = useState<number>();
   const [hours, setHours] = useState<number>();
   const [minutes, setMinutes] = useState<number>();
@@ -22,40 +23,44 @@ export default function Countdown() {
     `Dec 31, ${fullYear.getFullYear()} 23:59:59`
   ).getTime();
 
-  function calculateCountdown() {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
+  useEffect(() => {
+    function calculateCountdown() {
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      setDays(days);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        setDays(days);
 
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      setHours(hours);
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        setHours(hours);
 
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      setMinutes(minutes);
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        setMinutes(minutes);
 
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      setSeconds(seconds);
-      setExpired(distance);
-    }, 1000);
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        setSeconds(seconds);
+        setExpired(distance);
+      }, 1000);
 
-    return () => clearInterval(interval);
-  }
+      return () => clearInterval(interval);
+    }
 
-  calculateCountdown();
+    calculateCountdown();
+  }, [countDownDate]);
 
   return (
-    <div className={styles.countdown}>
-      <div className={styles.countdown__container}>
+    <div className={`${styles.countdown} ${countdownClass}`}>
+      <div
+        className={`${styles.countdown__container} ${countdownContainerClass}`}
+      >
         <div className={styles.countdown__title}>
           <h1 className={RockvilleSolid.className}>
             Tomorrowland {fullYear.getFullYear()}
           </h1>
-          <h2 className={NowRegular.className}>Music Festival Start in</h2>
+          <h2 className={nowRegular.className}>Music Festival Start in</h2>
         </div>
         <div className={styles.countdown__numbers}>
           {(expired as number) <= 0 ? (

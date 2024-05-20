@@ -9,11 +9,8 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-import localFont from "next/font/local";
+import { nowRegular } from "@/fonts/fonts";
 import "../../styles/_footer.scss";
-const nowRegular = localFont({
-  src: "../../../public/assets/fonts/now-regular.otf",
-});
 
 export default function Footer() {
   const pathName = usePathname();
@@ -68,7 +65,7 @@ export default function Footer() {
           <h2>Stay With Me</h2>
           <form>
             <div>
-              <input type="email" />
+              <input type="email" name="e-mail" />
               <button type="button">
                 <FaPaperPlane />
               </button>

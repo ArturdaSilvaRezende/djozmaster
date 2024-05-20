@@ -4,15 +4,11 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "@/components/modal";
-import localFont from "next/font/local";
+import { nowRegular } from "@/fonts/fonts";
 import { ServicesList, ServicesImageType } from "./servicesList";
 import { FaPlay } from "react-icons/fa";
 import ServiceImageVideo from "/public/assets/images/services/service-left.jpg";
 import styles from "@/styles/main/_AboutServices.module.scss";
-
-const nowRegular = localFont({
-  src: "../../../../public/assets/fonts/now-regular.otf",
-});
 
 export default function Services() {
   const [servicesList, setServicesList] = useState<ServicesImageType[]>([]);

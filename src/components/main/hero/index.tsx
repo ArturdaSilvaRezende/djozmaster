@@ -3,13 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import Modal from "@/components/modal";
-import localFont from "next/font/local";
+import { RockvilleSolid } from "@/fonts/fonts";
 import PlayDefault from "/public/assets/images/play-default.png";
 import styles from "@/styles/main/_Hero.module.scss";
-
-const RockvilleSolid = localFont({
-  src: "../../../../public/assets/fonts/RockvilleSolid.woff",
-});
 
 export default function Hero() {
   const searchParams = useSearchParams();

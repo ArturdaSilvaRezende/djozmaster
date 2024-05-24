@@ -1,12 +1,7 @@
 const discographyImages: string[] = [];
-const index: number[] = [];
 
 for (let i = 1; i <= 18; i++) {
   discographyImages.push(`disco-${i}.jpg`);
-}
-
-for (let i = 1; i <= 18; i++) {
-  index.push(i);
 }
 
 export type discographyListType = {

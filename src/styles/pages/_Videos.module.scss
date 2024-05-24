@@ -1,0 +1,207 @@
+.videos {
+  .videos__contents {
+    @apply container mx-auto text-center mt-24;
+
+    .videos__hero {
+      @apply mt-24 relative;
+
+      img {
+        @apply w-full h-full object-cover;
+      }
+
+      .hero__caption {
+        @apply absolute bottom-0 w-full text-left;
+        background: rgba(7, 14, 38, 0.7);
+        padding: 25px 30px 25px;
+
+        h4,
+        p {
+          color: var(--white);
+        }
+
+        h4 {
+          @apply font-bold;
+          font-family: "Rajdhani", sans-serif;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .videos__carousel {
+      @apply mt-12 relative;
+
+      button {
+        font-size: 22px;
+        color: #888888;
+        height: 50px;
+        width: 25px;
+        background: var(--white);
+        line-height: 50px;
+
+        &:last-child {
+          svg {
+            @apply mx-auto;
+          }
+        }
+      }
+
+      .carousel__contents {
+        figure {
+          .carousel__bg {
+            @apply relative;
+
+            .carousel__bg_video {
+              @apply bg-black absolute w-full h-full;
+              z-index: 3;
+
+              span {
+                @apply block p-1 absolute cursor-pointer;
+                background-color: var(--purple);
+                color: var(--white);
+              }
+              video {
+                @apply w-full h-full mt-3;
+              }
+            }
+
+            .carousel__play {
+              @apply absolute left-1/2 rounded-full;
+              height: 45px;
+              width: 45px;
+              background: #5c00ce;
+              cursor: pointer;
+              font-size: 16px;
+              line-height: 40px;
+              text-align: center;
+              top: 50%;
+              transform: translate(-50%, -50%);
+
+              img {
+                @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+                width: 13px;
+                height: 13px;
+              }
+            }
+          }
+
+          figcaption {
+            @apply text-left mt-3;
+
+            h3 {
+              @apply font-bold;
+              font-size: 17px;
+            }
+
+            p {
+              @apply mt-2;
+              color: var(--purple);
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .carousel__buttons_prev {
+        @apply absolute text-center;
+        top: 95px;
+        transform: translateY(-50%);
+        z-index: 2;
+      }
+
+      .carousel__buttons_next {
+        @apply absolute right-0 text-center;
+        top: 95px;
+        transform: translateY(-50%);
+        z-index: 2;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .videos__contents {
+      @apply px-5 mt-12;
+
+      .videos__hero {
+        @apply mt-12;
+
+        img {
+          height: 45vh;
+        }
+        .hero__caption {
+          padding: 15px;
+
+          h4 {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .videos__carousel {
+        .carousel__contents {
+          @apply -mb-16;
+
+          figure {
+            figcaption {
+              h3 {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .carousel__buttons_prev,
+        .carousel__buttons_next {
+          top: 68.5px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @apply mb-12;
+
+    .videos__contents {
+      @apply px-5 mt-0;
+
+      .videos__hero {
+        @apply mt-0;
+
+        img {
+          @apply object-contain;
+          height: 45vh;
+        }
+
+        .hero__caption {
+          padding: 15px;
+
+          h4 {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .videos__carousel {
+        @apply mb-20;
+
+        height: 280px;
+
+        .carousel__contents {
+          figure {
+            img {
+              @apply w-full;
+            }
+
+            .carousel__play {
+              top: 40%;
+            }
+          }
+        }
+
+        .carousel__buttons_prev,
+        .carousel__buttons_next {
+          top: 40%;
+        }
+      }
+    }
+  }
+}

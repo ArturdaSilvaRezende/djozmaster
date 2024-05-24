@@ -1,3 +1,5 @@
+import PageVideos from "@/components/pages/videos";
+
 export default function Videos() {
-  return <div>Videos</div>;
+  return <PageVideos />;
 }

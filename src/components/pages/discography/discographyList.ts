@@ -1,7 +1,7 @@
 const discographyImages: string[] = [];
 
 for (let i = 1; i <= 18; i++) {
-  discographyImages.push(`disco-${i}.jpg`);
+  discographyImages.push(`/assets/images/discography/disco-${i}.jpg`);
 }
 
 export type discographyListType = {

@@ -14,8 +14,6 @@ export default function Services() {
   const [servicesList, setServicesList] = useState<ServicesImageType[]>([]);
   const searchParams = useSearchParams();
   const modalServices = searchParams.get("modalservices");
-  const pathImages = "/assets/images/services/";
-  const pathVideoService = "/assets/videos/";
 
   useEffect(() => {
     setServicesList(ServicesList);
@@ -53,7 +51,7 @@ export default function Services() {
             }}
           >
             <Image
-              src={`${pathImages + service.icon}`}
+              src={service.icon}
               alt={service.title}
               width={60}
               height={60}
@@ -69,8 +67,7 @@ export default function Services() {
       {modalServices && (
         <Modal
           closeModalPath="/#aboutservices"
-          modalVideoPath={pathVideoService}
-          videoFileName="services.mp4"
+          modalVideoPath="/assets/videos/services.mp4"
         />
       )}
     </div>

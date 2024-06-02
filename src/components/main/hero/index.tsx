@@ -10,7 +10,6 @@ import styles from "@/styles/main/_Hero.module.scss";
 export default function Hero() {
   const searchParams = useSearchParams();
   const modalHero = searchParams.get("modalhero");
-  const pathVideoHero = "/assets/videos/";
 
   return (
     <section className={styles.hero} id="hero">
@@ -32,8 +31,7 @@ export default function Hero() {
       {modalHero && (
         <Modal
           closeModalPath="/#hero"
-          modalVideoPath={pathVideoHero}
-          videoFileName="hero.mp4"
+          modalVideoPath="/assets/videos/hero.mp4"
         />
       )}
     </section>

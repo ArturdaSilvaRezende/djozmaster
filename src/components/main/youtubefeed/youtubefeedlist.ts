@@ -1,9 +1,9 @@
-const Festival01 = "festival-01.mp4";
-const Festival02 = "festival-02.mp4";
-const Festival03 = "festival-03.mp4";
-const YoutubeFeed01 = "youtube-1.jpg";
-const YoutubeFeed02 = "youtube-2.jpg";
-const YoutubeFeed03 = "youtube-3.jpg";
+const Festival01 = "/assets/videos/festival-01.mp4";
+const Festival02 = "/assets/videos/festival-02.mp4";
+const Festival03 = "/assets/videos/festival-03.mp4";
+const YoutubeFeed01 = "/assets/images/youtube/youtube-1.jpg";
+const YoutubeFeed02 = "/assets/images/youtube/youtube-2.jpg";
+const YoutubeFeed03 = "/assets/images/youtube/youtube-3.jpg";
 
 export type FestivalType = {
   id: number;

@@ -6,14 +6,9 @@ import "@/styles/_animations.scss";
 type PropsModal = {
   closeModalPath: string;
   modalVideoPath: string;
-  videoFileName: string;
 };
 
-export default function Modal({
-  closeModalPath,
-  modalVideoPath,
-  videoFileName,
-}: PropsModal) {
+export default function Modal({ closeModalPath, modalVideoPath }: PropsModal) {
   // const pathname = usePathname();
 
   return (
@@ -27,10 +22,7 @@ export default function Modal({
           </Link>
           <div className={styles.modal__children}>
             <video controls className={styles.modalvideo}>
-              <source
-                src={`${modalVideoPath + videoFileName}`}
-                type="video/mp4"
-              />
+              <source src={modalVideoPath} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

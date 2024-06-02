@@ -1,0 +1,25 @@
+.btnBackToTop {
+  @apply p-1 bg-white fixed bottom-1 right-1 cursor-pointer rounded-sm 
+  transition-all duration-500 z-50;
+
+  &:hover {
+    background-color: var(--indigo);
+
+    svg {
+      color: var(--white);
+    }
+  }
+
+  svg {
+    @apply relative top-1;
+    color: var(--indigo);
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 1px 4px;
+    svg {
+      font-size: 16px;
+    }
+  }
+}

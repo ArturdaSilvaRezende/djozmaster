@@ -11,8 +11,6 @@ import "@/styles/_animations.scss";
 export default function YoutubeFeed() {
   const [festivals, setFestivals] = useState<FestivalType[]>([]);
   const [activeVideo, setTActiveVideo] = useState(0);
-  const pathImage = "/assets/images/youtube/";
-  const pathVideo = "/assets/videos/";
 
   const showActiveVideo = (cardId: number) => {
     setFestivals((festival) => {
@@ -41,7 +39,7 @@ export default function YoutubeFeed() {
           <figure key={festival.id} className={styles.youtubefeed__item}>
             <div className={styles.youtubefeed__contents}>
               <Image
-                src={`${pathImage + festival.fileImageName}`}
+                src={festival.fileImageName}
                 alt={festival.festivalAbout}
                 width={500}
                 height={0}
@@ -54,10 +52,7 @@ export default function YoutubeFeed() {
                     <AiOutlineClose />
                   </button>
                   <video controls>
-                    <source
-                      src={`${pathVideo + festival.fileVideoName}`}
-                      type="video/mp4"
-                    />
+                    <source src={festival.fileVideoName} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>

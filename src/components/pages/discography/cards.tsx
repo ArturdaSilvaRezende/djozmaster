@@ -5,13 +5,11 @@ import DiscoLink01 from "/public/assets/images/discography/link-1.jpg";
 import DiscoLink02 from "/public/assets/images/discography/link-2.jpg";
 
 export default function Cards(props: discographyListType) {
-  const pathImage = "/assets/images/discography/";
-
   return (
     <>
       <figure className="fadeIn">
         <Image
-          src={`${pathImage + props.disco}`}
+          src={props.disco}
           alt={`disco-${props.id}`}
           width={250}
           height={250}

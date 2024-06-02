@@ -1,4 +1,5 @@
 import Countdown from "../countdown";
+import BtnBackToTop from "../features/btnbacktotop";
 import AboutServices from "./aboutservices";
 import Events from "./events";
 import Hero from "./hero";
@@ -14,6 +15,7 @@ export default function Main() {
       <LatestTracks />
       <YoutubeFeed />
       <Countdown />
+      <BtnBackToTop />
     </main>
   );
 }

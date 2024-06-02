@@ -1,7 +1,7 @@
 const ServicesImages: string[] = [];
 
 for (let i = 1; i <= 4; i++) {
-  ServicesImages.push(`service-${i}.png`);
+  ServicesImages.push(`/assets/images/services/service-${i}.png`);
 }
 
 export type ServicesImageType = {

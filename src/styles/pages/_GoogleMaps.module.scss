@@ -1,0 +1,162 @@
+.contact {
+  .googleMaps {
+    @apply container mx-auto;
+
+    .googleMaps__contents {
+      height: 75vh;
+    }
+  }
+
+  .contactinfo {
+    @apply container mx-auto mt-16 flex justify-between;
+
+    h2 {
+      @apply font-bold mb-10;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 36px;
+    }
+
+    .contact__contents {
+      .contents__itens {
+        li {
+          @apply flex items-center mb-8;
+
+          p {
+            &:first-child {
+              @apply mr-8;
+              color: var(--purple);
+              font-size: 24px;
+            }
+
+            &:last-child {
+              @apply flex flex-col;
+            }
+
+            span {
+              &:nth-child(n) {
+                color: var(--secondary);
+              }
+
+              &:nth-child(1) {
+                @apply font-bold;
+                font-size: 18px;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact__form {
+      @apply w-8/12;
+
+      form {
+        textarea,
+        input {
+          outline: none;
+        }
+
+        .form__inputs {
+          @apply flex justify-between;
+
+          input {
+            height: 50px;
+            font-size: 13px;
+            color: #666666;
+            padding-left: 20px;
+            border: 1px solid #e1e1e1;
+            width: 31%;
+            margin-bottom: 20px;
+          }
+        }
+
+        textarea {
+          height: 120px;
+          font-size: 13px;
+          color: #666666;
+          padding-left: 20px;
+          padding-top: 12px;
+          border: 1px solid #e1e1e1;
+          width: 100%;
+          margin-bottom: 14px;
+          resize: none;
+        }
+
+        button {
+          font-size: 15px;
+          color: #ffffff;
+          background: #5c00ce;
+          font-weight: 700;
+          letter-spacing: 2px;
+          border: none;
+          text-transform: uppercase;
+          padding: 14px 30px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .googleMaps {
+      .googleMaps__contents {
+        height: 45vh;
+      }
+    }
+
+    .contactinfo {
+      @apply px-5;
+
+      .contact__form {
+        @apply w-6/12;
+
+        .form__inputs {
+          @apply flex-col;
+
+          input {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .googleMaps {
+      .googleMaps__contents {
+        height: 70vh;
+      }
+    }
+
+    .contactinfo {
+      @apply flex-col px-5;
+
+      .contact__contents {
+        @apply mb-5;
+
+        .contents__itens {
+          li {
+            p {
+              &:first-child {
+                @apply mr-4;
+              }
+            }
+          }
+        }
+      }
+
+      .contact__form {
+        @apply w-full mb-16;
+
+        .form__inputs {
+          @apply flex-col;
+
+          input {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ export default function Description() {
   return (
     <section className={styles.about__description}>
       <div className={styles.about__image}>
-        <Image src={AboutImage} alt="About Image" />
+        <Image src={AboutImage} alt="About Image" width={300} height={300} />
       </div>
 
       <div className={styles.about__contents}>

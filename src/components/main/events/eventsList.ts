@@ -1,12 +1,12 @@
-const Event01 = "event-1.jpg";
-const Event02 = "event-2.jpg";
-const Event03 = "event-3.jpg";
-const Event04 = "event-4.jpg";
-const Event05 = "event-5.jpg";
-const Event06 = "event-6.jpg";
-const Event07 = "event-7.jpg";
-const Event08 = "event-8.jpg";
-const Event09 = "event-9.jpg";
+const Event01 = "/assets/images/events/event-1.jpg";
+const Event02 = "/assets/images/events/event-2.jpg";
+const Event03 = "/assets/images/events/event-3.jpg";
+const Event04 = "/assets/images/events/event-4.jpg";
+const Event05 = "/assets/images/events/event-5.jpg";
+const Event06 = "/assets/images/events/event-6.jpg";
+const Event07 = "/assets/images/events/event-7.jpg";
+const Event08 = "/assets/images/events/event-8.jpg";
+const Event09 = "/assets/images/events/event-9.jpg";
 
 export type EventsType = {
   id: number;

@@ -1,7 +1,7 @@
 const soundsFile: string[] = [];
 
 for (let i = 1; i <= 9; i++) {
-  soundsFile.push(`sound-0${i}.mp3`);
+  soundsFile.push(`/assets/audios/sound-0${i}.mp3`);
 }
 
 export type SoundsListType = {

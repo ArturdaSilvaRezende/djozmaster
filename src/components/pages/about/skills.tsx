@@ -11,7 +11,6 @@ import styles from "@/styles/pages/_About.module.scss";
 export default function Skills() {
   const searchParams = useSearchParams();
   const modalHero = searchParams.get("modalAbout");
-  const pathVideoAbout = "/assets/videos/";
 
   return (
     <section className={styles.about__skills}>
@@ -77,8 +76,7 @@ export default function Skills() {
       {modalHero && (
         <Modal
           closeModalPath="/about"
-          modalVideoPath={pathVideoAbout}
-          videoFileName="about.mp4"
+          modalVideoPath="/assets/videos/about.mp4"
         />
       )}
     </section>

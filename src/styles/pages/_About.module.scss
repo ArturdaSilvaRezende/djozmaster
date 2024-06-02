@@ -127,7 +127,7 @@
         @apply w-1/2 max-[767px]:w-full max-[767px]:mb-14;
 
         img {
-          @apply w-full h-auto;
+          @apply w-10/12 h-auto mx-auto;
         }
       }
 
@@ -146,7 +146,7 @@
         }
 
         img {
-          @apply w-full h-auto;
+          @apply w-60 h-auto;
         }
       }
     }

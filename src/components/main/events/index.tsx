@@ -17,7 +17,6 @@ import styles from "@/styles/main/_Events.module.scss";
 
 export default function Events() {
   const [eventsList, setEventList] = useState<EventsType[]>([]);
-  const pathImage = "/assets/images/events/";
 
   useEffect(() => {
     setEventList(EventList);
@@ -79,7 +78,7 @@ export default function Events() {
             <SwiperSlide key={eventItem.id}>
               <figure>
                 <Image
-                  src={`${pathImage + eventItem.img}`}
+                  src={eventItem.img}
                   alt={eventItem.artist}
                   width={350}
                   height={300}
